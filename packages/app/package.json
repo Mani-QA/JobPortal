@@ -1,0 +1,24 @@
+{
+  "name": "@job-portal/app",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prebuild": "node scripts/copy-frontend.mjs",
+    "build": "echo 'Build complete'",
+    "dev": "npm run prebuild && wrangler dev",
+    "deploy": "npm run prebuild && wrangler deploy",
+    "deploy:staging": "npm run prebuild && wrangler deploy --env staging",
+    "deploy:production": "npm run prebuild && wrangler deploy --env production"
+  },
+  "dependencies": {
+    "@job-portal/shared": "*",
+    "hono": "^4.0.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241230.0",
+    "typescript": "^5.7.2",
+    "wrangler": "^3.114.16"
+  }
+}
+

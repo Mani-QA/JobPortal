@@ -1,0 +1,39 @@
+{
+  "name": "job-portal",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:api": "turbo run dev --filter=@job-portal/api",
+    "dev:frontend": "turbo run dev --filter=@job-portal/frontend",
+    "dev:app": "turbo run dev --filter=@job-portal/app",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "db:migrate": "turbo run db:migrate --filter=@job-portal/api",
+    "typecheck": "turbo run typecheck",
+    "deploy": "turbo run deploy --filter=@job-portal/app",
+    "deploy:separate": "turbo run deploy --filter=@job-portal/api --filter=@job-portal/frontend",
+    "deploy:api": "turbo run deploy --filter=@job-portal/api",
+    "deploy:frontend": "turbo run deploy --filter=@job-portal/frontend",
+    "deploy:staging": "turbo run deploy:staging --filter=@job-portal/app",
+    "deploy:production": "turbo run deploy:production --filter=@job-portal/app"
+  },
+  "devDependencies": {
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.2",
+    "wrangler": "^4.54.0"
+  },
+  "packageManager": "npm@10.2.0",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.7.6",
+    "zod": "^4.3.2"
+  }
+}

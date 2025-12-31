@@ -1,0 +1,41 @@
+name = "job-portal-api"
+main = "src/index.ts"
+compatibility_date = "2024-12-30"
+compatibility_flags = ["nodejs_compat"]
+
+# Development settings
+[dev]
+port = 8787
+local_protocol = "http"
+
+# D1 Database binding
+[[d1_databases]]
+binding = "DB"
+database_name = "job-portal-db"
+database_id = "91018247-4a76-4065-9e65-b3efbb98723f"
+migrations_dir = "schema/migrations"
+
+# R2 Bucket binding for file storage
+[[r2_buckets]]
+binding = "STORAGE"
+bucket_name = "job-portal-storage"
+
+# Environment variables (secrets should be set via wrangler secret)
+[vars]
+ENVIRONMENT = "development"
+CORS_ORIGIN = "http://localhost:5173"
+JWT_EXPIRES_IN = "15m"
+REFRESH_TOKEN_EXPIRES_IN = "7d"
+# Email configuration (set EMAIL_API_KEY as secret in production)
+EMAIL_FROM = "noreply@jobportal.com"
+EMAIL_FROM_NAME = "JobPortal"
+EMAIL_PROVIDER = "console" # Use 'sendgrid', 'mailgun', or 'resend' in production
+
+# Production environment
+[env.production]
+vars = { ENVIRONMENT = "production", CORS_ORIGIN = "https://your-domain.com" }
+
+# Staging environment
+[env.staging]
+vars = { ENVIRONMENT = "staging", CORS_ORIGIN = "https://staging.your-domain.com" }
+

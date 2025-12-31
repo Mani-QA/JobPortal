@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#14b8a6"/>
+      <stop offset="100%" style="stop-color:#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="200" cy="150" r="200" fill="#14b8a6" opacity="0.05"/>
+  <circle cx="1000" cy="480" r="250" fill="#8b5cf6" opacity="0.05"/>
+  
+  <!-- Grid pattern -->
+  <g stroke="#334155" stroke-width="0.5" opacity="0.3">
+    <line x1="0" y1="157.5" x2="1200" y2="157.5"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="472.5" x2="1200" y2="472.5"/>
+    <line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="900" y1="0" x2="900" y2="630"/>
+  </g>
+  
+  <!-- Logo mark -->
+  <g transform="translate(100, 220)">
+    <!-- Briefcase icon -->
+    <rect x="0" y="30" width="80" height="60" rx="8" fill="url(#primaryGradient)"/>
+    <rect x="25" y="10" width="30" height="25" rx="4" fill="none" stroke="url(#primaryGradient)" stroke-width="4"/>
+    <line x1="0" y1="50" x2="80" y2="50" stroke="#0f172a" stroke-width="3"/>
+    <circle cx="40" cy="50" r="6" fill="#0f172a"/>
+  </g>
+  
+  <!-- Brand name -->
+  <text x="200" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="800" fill="#f1f5f9">
+    Job<tspan fill="url(#primaryGradient)">Portal</tspan>
+  </text>
+  
+  <!-- Tagline -->
+  <text x="100" y="350" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="400" fill="#94a3b8">
+    Find Your Dream Career. Build Your Future.
+  </text>
+  
+  <!-- Feature pills -->
+  <g transform="translate(100, 420)">
+    <rect x="0" y="0" width="180" height="45" rx="22.5" fill="#1e293b" stroke="#334155"/>
+    <text x="90" y="30" font-family="system-ui, sans-serif" font-size="18" fill="#14b8a6" text-anchor="middle">🔍 10,000+ Jobs</text>
+    
+    <rect x="200" y="0" width="200" height="45" rx="22.5" fill="#1e293b" stroke="#334155"/>
+    <text x="300" y="30" font-family="system-ui, sans-serif" font-size="18" fill="#14b8a6" text-anchor="middle">🏢 2,500+ Companies</text>
+    
+    <rect x="420" y="0" width="180" height="45" rx="22.5" fill="#1e293b" stroke="#334155"/>
+    <text x="510" y="30" font-family="system-ui, sans-serif" font-size="18" fill="#14b8a6" text-anchor="middle">🌍 Remote & Hybrid</text>
+  </g>
+  
+  <!-- Decorative elements -->
+  <g fill="none" stroke="url(#accentGradient)" stroke-width="2" opacity="0.6">
+    <circle cx="950" cy="150" r="40"/>
+    <circle cx="950" cy="150" r="60"/>
+    <circle cx="950" cy="150" r="80"/>
+  </g>
+  
+  <g fill="url(#primaryGradient)" opacity="0.4">
+    <circle cx="1050" cy="280" r="8"/>
+    <circle cx="1100" cy="320" r="6"/>
+    <circle cx="1080" cy="240" r="4"/>
+  </g>
+  
+  <!-- URL -->
+  <text x="100" y="560" font-family="system-ui, monospace" font-size="20" fill="#64748b">
+    job-portal.www5.workers.dev
+  </text>
+</svg>
+

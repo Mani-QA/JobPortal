@@ -1,0 +1,47 @@
+name = "job-portal-frontend"
+compatibility_date = "2024-12-30"
+compatibility_flags = ["nodejs_compat"]
+
+# Use the custom worker for advanced features (SPA routing, caching, API proxy)
+main = "src/worker.ts"
+
+# Static Assets configuration (Cloudflare Workers Static Assets)
+# This serves the built Vite app from the dist folder
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+
+# SPA-style routing - serve index.html for unmatched routes
+# The worker handles this via custom logic
+not_found_handling = "single-page-application"
+
+# Development settings
+[dev]
+port = 8788
+local_protocol = "http"
+
+# Environment variables
+[vars]
+ENVIRONMENT = "development"
+API_URL = "http://localhost:8787"
+
+# Production environment
+[env.production]
+name = "job-portal-frontend"
+vars = { ENVIRONMENT = "production", API_URL = "https://job-portal-api.your-subdomain.workers.dev" }
+
+[env.production.assets]
+directory = "./dist"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+
+# Staging environment
+[env.staging]
+name = "job-portal-frontend-staging"
+vars = { ENVIRONMENT = "staging", API_URL = "https://job-portal-api-staging.your-subdomain.workers.dev" }
+
+[env.staging.assets]
+directory = "./dist"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+
