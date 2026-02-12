@@ -50,6 +50,7 @@ todos:
   - id: testing-polish
     content: Add responsive polish, accessibility checks, and final testing
     status: completed
+isProject: false
 ---
 
 # Job Portal -
@@ -114,8 +115,6 @@ JobPortal/
 ├── package.json           # Workspace root
 └── turbo.json             # Turborepo config
 ```
-
-
 
 ## Tech Stack Details
 
@@ -289,24 +288,24 @@ flowchart LR
 
 ### Core Configuration
 
-- [`package.json`](package.json) - Workspace root with Turborepo
-- [`turbo.json`](turbo.json) - Build pipeline configuration
-- [`packages/shared/src/types.ts`](packages/shared/src/types.ts) - Shared TypeScript types
-- [`packages/shared/src/schemas.ts`](packages/shared/src/schemas.ts) - Zod validation schemas
+- `[package.json](package.json)` - Workspace root with Turborepo
+- `[turbo.json](turbo.json)` - Build pipeline configuration
+- `[packages/shared/src/types.ts](packages/shared/src/types.ts)` - Shared TypeScript types
+- `[packages/shared/src/schemas.ts](packages/shared/src/schemas.ts)` - Zod validation schemas
 
 ### Backend (API)
 
-- [`packages/api/wrangler.toml`](packages/api/wrangler.toml) - Cloudflare config
-- [`packages/api/src/index.ts`](packages/api/src/index.ts) - Hono app entry
-- [`packages/api/src/middleware/auth.ts`](packages/api/src/middleware/auth.ts) - Auth middleware
-- [`packages/api/src/middleware/cache.ts`](packages/api/src/middleware/cache.ts) - Cache middleware
-- [`packages/api/src/routes/*.ts`](packages/api/src/routes/) - Route handlers
-- [`packages/api/schema/migrations/`](packages/api/schema/migrations/) - D1 migrations
+- `[packages/api/wrangler.toml](packages/api/wrangler.toml)` - Cloudflare config
+- `[packages/api/src/index.ts](packages/api/src/index.ts)` - Hono app entry
+- `[packages/api/src/middleware/auth.ts](packages/api/src/middleware/auth.ts)` - Auth middleware
+- `[packages/api/src/middleware/cache.ts](packages/api/src/middleware/cache.ts)` - Cache middleware
+- `[packages/api/src/routes/*.ts](packages/api/src/routes/)` - Route handlers
+- `[packages/api/schema/migrations/](packages/api/schema/migrations/)` - D1 migrations
 
 ### Frontend
 
-- [`packages/frontend/src/App.tsx`](packages/frontend/src/App.tsx) - Root component with routing
-- [`packages/frontend/src/stores/`](packages/frontend/src/stores/) - Zustand stores
-- [`packages/frontend/src/pages/`](packages/frontend/src/pages/) - Page components
-- [`packages/frontend/src/components/`](packages/frontend/src/components/) - Reusable components
-- [`packages/frontend/tailwind.config.js`](packages/frontend/tailwind.config.js) - Custom theme
+- `[packages/frontend/src/App.tsx](packages/frontend/src/App.tsx)` - Root component with routing
+- `[packages/frontend/src/stores/](packages/frontend/src/stores/)` - Zustand stores
+- `[packages/frontend/src/pages/](packages/frontend/src/pages/)` - Page components
+- `[packages/frontend/src/components/](packages/frontend/src/components/)` - Reusable components
+

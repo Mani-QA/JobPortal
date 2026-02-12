@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/Input';
 import { useAuthStore } from '@/stores/authStore';
 import { loginSchema, type LoginInput } from '@job-portal/shared';
 import toast from 'react-hot-toast';
+import DeveloperFooter from '@/components/DeveloperFooter';
 
 export default function LoginPage() {
   const navigate = useNavigate();
@@ -36,7 +37,8 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex">
+    <div className="min-h-screen flex flex-col">
+      <div className="flex flex-1">
       {/* Left Side - Form */}
       <div className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12">
         <motion.div
@@ -154,6 +156,8 @@ export default function LoginPage() {
           </div>
         </motion.div>
       </div>
+      </div>
+      <DeveloperFooter variant="dark" />
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Briefcase, Menu, X, User, LogIn } from 'lucide-react';
 import { useState } from 'react';
 import { useAuthStore } from '@/stores/authStore';
+import DeveloperFooter from '@/components/DeveloperFooter';
 
 export default function PublicLayout() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -196,6 +197,7 @@ export default function PublicLayout() {
           <div className="mt-12 pt-8 border-t border-navy-800 text-center text-sm text-navy-500">
             © {new Date().getFullYear()} JobPortal. All rights reserved.
           </div>
+          <DeveloperFooter variant="dark" />
         </div>
       </footer>
     </div>

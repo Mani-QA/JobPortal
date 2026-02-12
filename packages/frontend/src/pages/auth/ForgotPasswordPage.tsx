@@ -9,6 +9,7 @@ import { Input } from '@/components/ui/Input';
 import { api } from '@/lib/api';
 import { forgotPasswordSchema, type ForgotPasswordInput } from '@job-portal/shared';
 import toast from 'react-hot-toast';
+import DeveloperFooter from '@/components/DeveloperFooter';
 
 export default function ForgotPasswordPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -105,6 +106,8 @@ export default function ForgotPasswordPage() {
           )}
         </div>
       </motion.div>
+
+      <DeveloperFooter variant="dark" />
     </div>
   );
 }

@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import { useState } from 'react';
 import { useAuthStore } from '@/stores/authStore';
+import DeveloperFooter from '@/components/DeveloperFooter';
 
 interface DashboardLayoutProps {
   userType: 'seeker' | 'employer';
@@ -209,6 +210,11 @@ export default function DashboardLayout({ userType }: DashboardLayoutProps) {
         <main className="p-4 sm:p-6 lg:p-8">
           <Outlet />
         </main>
+
+        {/* Developer Footer */}
+        <footer className="border-t border-navy-800/50 mt-8">
+          <DeveloperFooter variant="dark" />
+        </footer>
       </div>
     </div>
   );

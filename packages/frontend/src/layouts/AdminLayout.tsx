@@ -17,6 +17,7 @@ import {
   HelpCircle
 } from 'lucide-react';
 import { useAuthStore } from '../stores/authStore';
+import DeveloperFooter from '@/components/DeveloperFooter';
 
 const navigation = [
   { name: 'Dashboard', href: '/admin', icon: LayoutDashboard },
@@ -244,6 +245,7 @@ export default function AdminLayout() {
             <p>© 2024 JobPortal. All rights reserved.</p>
             <p>Admin Panel v1.0.0</p>
           </div>
+          <DeveloperFooter variant="light" />
         </footer>
       </div>
 

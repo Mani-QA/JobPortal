@@ -9,6 +9,7 @@ import { Input } from '@/components/ui/Input';
 import { useAuthStore } from '@/stores/authStore';
 import { registerSchema, type RegisterInput } from '@job-portal/shared';
 import toast from 'react-hot-toast';
+import DeveloperFooter from '@/components/DeveloperFooter';
 
 export default function RegisterPage() {
   const navigate = useNavigate();
@@ -187,6 +188,8 @@ export default function RegisterPage() {
           </p>
         </div>
       </motion.div>
+
+      <DeveloperFooter variant="dark" />
     </div>
   );
 }
